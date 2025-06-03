@@ -6,17 +6,52 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXFileReference section */
-		770F1FCD2DEE0C7B00140442 /* Smriti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smriti.app; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		7707EEED2DEEC735008FCEE5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */; };
+		7707EEEF2DEECB04008FCEE5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEE2DEECB04008FCEE5 /* Search.swift */; };
+		7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEF12DEED006008FCEE5 /* NotesCard.swift */; };
+		7707EEF42DEEE116008FCEE5 /* RepoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEF32DEEE116008FCEE5 /* RepoCard.swift */; };
+		7748B3612DEEB7D2001A816B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7748B3582DEEB7D2001A816B /* Preview Assets.xcassets */; };
+		7748B3622DEEB7D2001A816B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7748B35A2DEEB7D2001A816B /* Assets.xcassets */; };
+		7748B3632DEEB7D2001A816B /* NavigationBarStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B34B2DEEB7D2001A816B /* NavigationBarStyleKey.swift */; };
+		7748B3642DEEB7D2001A816B /* ViewOffsetKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B34C2DEEB7D2001A816B /* ViewOffsetKey.swift */; };
+		7748B3652DEEB7D2001A816B /* NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B34E2DEEB7D2001A816B /* NavigationBarStyle.swift */; };
+		7748B3662DEEB7D2001A816B /* ScrollOffsetBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B34F2DEEB7D2001A816B /* ScrollOffsetBackground.swift */; };
+		7748B3672DEEB7D2001A816B /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3512DEEB7D2001A816B /* NavigationBar.swift */; };
+		7748B3682DEEB7D2001A816B /* NavigationBarVariableBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3522DEEB7D2001A816B /* NavigationBarVariableBlurView.swift */; };
+		7748B3692DEEB7D2001A816B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3532DEEB7D2001A816B /* NavigationBarView.swift */; };
+		7748B36A2DEEB7D2001A816B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B35C2DEEB7D2001A816B /* ContentView.swift */; };
+		7748B36B2DEEB7D2001A816B /* SmritiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B35D2DEEB7D2001A816B /* SmritiApp.swift */; };
+		7748B36D2DEEB7F6001A816B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B36C2DEEB7F6001A816B /* Home.swift */; };
+		7748B36F2DEEB7F9001A816B /* Repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B36E2DEEB7F9001A816B /* Repos.swift */; };
+		7748B3712DEEB7FA001A816B /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3702DEEB7FA001A816B /* Notes.swift */; };
+		7748B3732DEEB7FB001A816B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3722DEEB7FB001A816B /* Settings.swift */; };
+		7748B3772DEEBB25001A816B /* UniversalOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3762DEEBB25001A816B /* UniversalOverlay.swift */; };
+/* End PBXBuildFile section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		770F1FCF2DEE0C7B00140442 /* Smriti */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Smriti;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXFileReference section */
+		7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		7707EEEE2DEECB04008FCEE5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		7707EEF12DEED006008FCEE5 /* NotesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCard.swift; sourceTree = "<group>"; };
+		7707EEF32DEEE116008FCEE5 /* RepoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCard.swift; sourceTree = "<group>"; };
+		770F1FCD2DEE0C7B00140442 /* Smriti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smriti.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7748B34B2DEEB7D2001A816B /* NavigationBarStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleKey.swift; sourceTree = "<group>"; };
+		7748B34C2DEEB7D2001A816B /* ViewOffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOffsetKey.swift; sourceTree = "<group>"; };
+		7748B34E2DEEB7D2001A816B /* NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyle.swift; sourceTree = "<group>"; };
+		7748B34F2DEEB7D2001A816B /* ScrollOffsetBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollOffsetBackground.swift; sourceTree = "<group>"; };
+		7748B3512DEEB7D2001A816B /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		7748B3522DEEB7D2001A816B /* NavigationBarVariableBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarVariableBlurView.swift; sourceTree = "<group>"; };
+		7748B3532DEEB7D2001A816B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		7748B3582DEEB7D2001A816B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7748B35A2DEEB7D2001A816B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7748B35C2DEEB7D2001A816B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7748B35D2DEEB7D2001A816B /* SmritiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmritiApp.swift; sourceTree = "<group>"; };
+		7748B36C2DEEB7F6001A816B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		7748B36E2DEEB7F9001A816B /* Repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repos.swift; sourceTree = "<group>"; };
+		7748B3702DEEB7FA001A816B /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		7748B3722DEEB7FB001A816B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		7748B3762DEEBB25001A816B /* UniversalOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalOverlay.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		770F1FCA2DEE0C7B00140442 /* Frameworks */ = {
@@ -29,10 +64,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7707EEF02DEECFF5008FCEE5 /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3702DEEB7FA001A816B /* Notes.swift */,
+				7707EEF12DEED006008FCEE5 /* NotesCard.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		7707EEF52DEEE11E008FCEE5 /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				7748B36E2DEEB7F9001A816B /* Repos.swift */,
+				7707EEF32DEEE116008FCEE5 /* RepoCard.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
 		770F1FC42DEE0C7B00140442 = {
 			isa = PBXGroup;
 			children = (
-				770F1FCF2DEE0C7B00140442 /* Smriti */,
+				7748B3602DEEB7D2001A816B /* Smriti */,
 				770F1FCE2DEE0C7B00140442 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +96,119 @@
 				770F1FCD2DEE0C7B00140442 /* Smriti.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7748B34D2DEEB7D2001A816B /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				7748B34B2DEEB7D2001A816B /* NavigationBarStyleKey.swift */,
+				7748B34C2DEEB7D2001A816B /* ViewOffsetKey.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
+		7748B3502DEEB7D2001A816B /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				7748B34D2DEEB7D2001A816B /* Keys */,
+				7748B34E2DEEB7D2001A816B /* NavigationBarStyle.swift */,
+				7748B34F2DEEB7D2001A816B /* ScrollOffsetBackground.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		7748B3542DEEB7D2001A816B /* Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3502DEEB7D2001A816B /* Setup */,
+				7748B3512DEEB7D2001A816B /* NavigationBar.swift */,
+				7748B3522DEEB7D2001A816B /* NavigationBarVariableBlurView.swift */,
+				7748B3532DEEB7D2001A816B /* NavigationBarView.swift */,
+			);
+			path = "Navigation Bar";
+			sourceTree = "<group>";
+		};
+		7748B3552DEEB7D2001A816B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3782DEEBB2B001A816B /* Alerts */,
+				7748B3542DEEB7D2001A816B /* Navigation Bar */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7748B3562DEEB7D2001A816B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7748B3572DEEB7D2001A816B /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				7707EEEE2DEECB04008FCEE5 /* Search.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		7748B3592DEEB7D2001A816B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3582DEEB7D2001A816B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7748B35B2DEEB7D2001A816B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3592DEEB7D2001A816B /* Preview Content */,
+				7748B35A2DEEB7D2001A816B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7748B35E2DEEB7D2001A816B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				7748B35C2DEEB7D2001A816B /* ContentView.swift */,
+				7748B35D2DEEB7D2001A816B /* SmritiApp.swift */,
+				7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		7748B35F2DEEB7D2001A816B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3722DEEB7FB001A816B /* Settings.swift */,
+				7707EEF02DEECFF5008FCEE5 /* Notes */,
+				7707EEF52DEEE11E008FCEE5 /* Repos */,
+				7748B36C2DEEB7F6001A816B /* Home.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7748B3602DEEB7D2001A816B /* Smriti */ = {
+			isa = PBXGroup;
+			children = (
+				7748B35E2DEEB7D2001A816B /* Root */,
+				7748B3562DEEB7D2001A816B /* Models */,
+				7748B3572DEEB7D2001A816B /* Observables */,
+				7748B35F2DEEB7D2001A816B /* Views */,
+				7748B3552DEEB7D2001A816B /* Helpers */,
+				7748B35B2DEEB7D2001A816B /* Resources */,
+			);
+			path = Smriti;
+			sourceTree = "<group>";
+		};
+		7748B3782DEEBB2B001A816B /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7748B3762DEEBB25001A816B /* UniversalOverlay.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +225,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				770F1FCF2DEE0C7B00140442 /* Smriti */,
 			);
 			name = Smriti;
 			packageProductDependencies = (
@@ -109,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7748B3612DEEB7D2001A816B /* Preview Assets.xcassets in Resources */,
+				7748B3622DEEB7D2001A816B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +284,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */,
+				7748B3632DEEB7D2001A816B /* NavigationBarStyleKey.swift in Sources */,
+				7748B3642DEEB7D2001A816B /* ViewOffsetKey.swift in Sources */,
+				7748B3772DEEBB25001A816B /* UniversalOverlay.swift in Sources */,
+				7748B3652DEEB7D2001A816B /* NavigationBarStyle.swift in Sources */,
+				7748B36D2DEEB7F6001A816B /* Home.swift in Sources */,
+				7748B3662DEEB7D2001A816B /* ScrollOffsetBackground.swift in Sources */,
+				7748B3672DEEB7D2001A816B /* NavigationBar.swift in Sources */,
+				7748B3712DEEB7FA001A816B /* Notes.swift in Sources */,
+				7748B3732DEEB7FB001A816B /* Settings.swift in Sources */,
+				7748B3682DEEB7D2001A816B /* NavigationBarVariableBlurView.swift in Sources */,
+				7748B3692DEEB7D2001A816B /* NavigationBarView.swift in Sources */,
+				7748B36A2DEEB7D2001A816B /* ContentView.swift in Sources */,
+				7707EEF42DEEE116008FCEE5 /* RepoCard.swift in Sources */,
+				7707EEED2DEEC735008FCEE5 /* Onboarding.swift in Sources */,
+				7707EEEF2DEECB04008FCEE5 /* Search.swift in Sources */,
+				7748B36B2DEEB7D2001A816B /* SmritiApp.swift in Sources */,
+				7748B36F2DEEB7F9001A816B /* Repos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,15 +434,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3YK32DPS3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Smriti;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -280,15 +466,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 3YK32DPS3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Smriti;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
