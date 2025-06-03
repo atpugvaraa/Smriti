@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		485569EC2DEF28BC00677B4C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EB2DEF28BC00677B4C /* Models.swift */; };
+		485569F02DEF28EC00677B4C /* GitHubAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */; };
 		7707EEED2DEEC735008FCEE5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */; };
 		7707EEEF2DEECB04008FCEE5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEE2DEECB04008FCEE5 /* Search.swift */; };
 		7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEF12DEED006008FCEE5 /* NotesCard.swift */; };
@@ -30,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		485569EA2DEF27A500677B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		485569EB2DEF28BC00677B4C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthViewModel.swift; sourceTree = "<group>"; };
 		7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		7707EEEE2DEECB04008FCEE5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		7707EEF12DEED006008FCEE5 /* NotesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCard.swift; sourceTree = "<group>"; };
@@ -64,6 +69,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485569E92DEF26EF00677B4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				485569EB2DEF28BC00677B4C /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		485569EE2DEF28E600677B4C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		7707EEF02DEECFF5008FCEE5 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,13 +158,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		7748B3562DEEB7D2001A816B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		7748B3572DEEB7D2001A816B /* Observables */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +207,10 @@
 		7748B3602DEEB7D2001A816B /* Smriti */ = {
 			isa = PBXGroup;
 			children = (
+				485569EE2DEF28E600677B4C /* ViewModels */,
+				485569EA2DEF27A500677B4C /* Info.plist */,
+				485569E92DEF26EF00677B4C /* Models */,
 				7748B35E2DEEB7D2001A816B /* Root */,
-				7748B3562DEEB7D2001A816B /* Models */,
 				7748B3572DEEB7D2001A816B /* Observables */,
 				7748B35F2DEEB7D2001A816B /* Views */,
 				7748B3552DEEB7D2001A816B /* Helpers */,
@@ -285,10 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */,
+				485569F02DEF28EC00677B4C /* GitHubAuthViewModel.swift in Sources */,
 				7748B3632DEEB7D2001A816B /* NavigationBarStyleKey.swift in Sources */,
 				7748B3642DEEB7D2001A816B /* ViewOffsetKey.swift in Sources */,
 				7748B3772DEEBB25001A816B /* UniversalOverlay.swift in Sources */,
 				7748B3652DEEB7D2001A816B /* NavigationBarStyle.swift in Sources */,
+				485569EC2DEF28BC00677B4C /* Models.swift in Sources */,
 				7748B36D2DEEB7F6001A816B /* Home.swift in Sources */,
 				7748B3662DEEB7D2001A816B /* ScrollOffsetBackground.swift in Sources */,
 				7748B3672DEEB7D2001A816B /* NavigationBar.swift in Sources */,
@@ -435,9 +453,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3YK32DPS3W;
+				DEVELOPMENT_TEAM = 3BD2H3ZHMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Smriti/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Smriti;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -467,9 +486,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3YK32DPS3W;
+				DEVELOPMENT_TEAM = 3BD2H3ZHMD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Smriti/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Smriti;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

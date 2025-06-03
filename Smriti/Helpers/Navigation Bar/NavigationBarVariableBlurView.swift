@@ -41,14 +41,10 @@ struct NavigationBarVariableBlurView: UIViewRepresentable {
         self.fromTop = fromTop
         
         let cacheKey = "\(maskHeight)-\(fromTop)"
-        Self.cacheQueue.async {
-            if NavigationBarVariableBlurView.maskCache[cacheKey] == nil {
-                Task.detached(priority: .userInitiated) {
-                    let maskImage = await createGradientImage(maskHeight: maskHeight, fromTop: fromTop)
-                    await MainActor.run {
-                        NavigationBarVariableBlurView.maskCache[cacheKey] = maskImage
-                    }
-                }
+        Task { @MainActor in
+            if Self.maskCache[cacheKey] == nil {
+                let maskImage = await createGradientImage(maskHeight: maskHeight, fromTop: fromTop)
+                Self.maskCache[cacheKey] = maskImage
             }
         }
     }
