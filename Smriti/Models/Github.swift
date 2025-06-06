@@ -1,7 +1,6 @@
 import Foundation
 
 // MARK: - Device Flow Responses
-
 struct GitHubDeviceCodeResponse: Codable {
     let device_code: String
     let user_code: String

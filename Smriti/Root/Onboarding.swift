@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Onboarding: View {
-    @State var isOnboarding: Bool = true
+    @AppStorage("isOnboarding") private var isOnboarding: Bool = true
     
     var body: some View {
         VStack {

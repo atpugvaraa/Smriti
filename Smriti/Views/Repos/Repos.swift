@@ -1,3 +1,10 @@
+//
+//  Repos.swift
+//  Smriti
+//
+//  Created by Aarav Gupta on 03/06/25.
+//
+
 import SwiftUI
 
 struct Repos: View {
@@ -5,16 +12,12 @@ struct Repos: View {
     @State private var showDeleteOverlay = false
     @State private var repoToDelete: GitHubRepo?
     @State private var isDeleting = false
-    @EnvironmentObject var viewModel: GitHubAuthViewModel
-
-    private let columns = [
-        GridItem(.adaptive(minimum: 180, maximum: 320), spacing: 16)
-    ]
+    @State private var auth = GitHubAuth.shared
 
     var body: some View {
         NavigationStack {
             NavigationBarView(title: "Repos", scrollOffset: $scrollOffset) {
-                if !viewModel.isLoggedIn {
+                if !auth.isLoggedIn {
                     VStack(spacing: 16) {
                         Image(systemName: "lock.slash")
                             .resizable()
@@ -27,7 +30,7 @@ struct Repos: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     ScrollView {
-                        if viewModel.repos.isEmpty {
+                        if auth.repos.isEmpty {
                             VStack(spacing: 16) {
                                 ProgressView("Loading repositories…")
                                 Text("No repositories found, or loading…")
@@ -35,16 +38,16 @@ struct Repos: View {
                             }
                             .frame(maxWidth: .infinity, minHeight: 200)
                         } else {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(viewModel.repos) { repo in
-                                    RepoCardView(repo: repo, onDelete: {
-                                        repoToDelete = repo
-                                        showDeleteOverlay = true
-                                    })
-                                    .disabled(isDeleting)
+                            ScrollView {
+                                VStack(spacing: 12) {
+                                    ForEach(0...24, id: \.self) { _ in
+                                        RepoCard()
+                                            .frame(maxWidth: .infinity)
+                                            .padding(.horizontal, 20)
+                                    }
                                 }
+                                .padding(.top)
                             }
-                            .padding()
                         }
                     }
                 }
@@ -57,11 +60,11 @@ struct Repos: View {
                     isDeleting: isDeleting,
                     onConfirm: {
                         isDeleting = true
-                        viewModel.deleteRepo(repo: repo) { success in
+                        auth.deleteRepo(repo: repo) { success in
                             isDeleting = false
                             showDeleteOverlay = false
                             repoToDelete = nil
-                            viewModel.fetchUserRepos()
+                            auth.fetchUserRepos()
                         }
                     },
                     onCancel: {

@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		485569EC2DEF28BC00677B4C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EB2DEF28BC00677B4C /* Models.swift */; };
-		485569F02DEF28EC00677B4C /* GitHubAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */; };
+		485569EC2DEF28BC00677B4C /* Github.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EB2DEF28BC00677B4C /* Github.swift */; };
+		485569F02DEF28EC00677B4C /* GitHubAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485569EF2DEF28EC00677B4C /* GitHubAuth.swift */; };
 		7707EEED2DEEC735008FCEE5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */; };
 		7707EEEF2DEECB04008FCEE5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEEE2DEECB04008FCEE5 /* Search.swift */; };
 		7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEF12DEED006008FCEE5 /* NotesCard.swift */; };
 		7707EEF42DEEE116008FCEE5 /* RepoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EEF32DEEE116008FCEE5 /* RepoCard.swift */; };
+		7707EF072DEF4C49008FCEE5 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7707EF062DEF4C49008FCEE5 /* Triangle.swift */; };
 		7748B3612DEEB7D2001A816B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7748B3582DEEB7D2001A816B /* Preview Assets.xcassets */; };
 		7748B3622DEEB7D2001A816B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7748B35A2DEEB7D2001A816B /* Assets.xcassets */; };
 		7748B3632DEEB7D2001A816B /* NavigationBarStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B34B2DEEB7D2001A816B /* NavigationBarStyleKey.swift */; };
@@ -29,16 +30,18 @@
 		7748B3712DEEB7FA001A816B /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3702DEEB7FA001A816B /* Notes.swift */; };
 		7748B3732DEEB7FB001A816B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3722DEEB7FB001A816B /* Settings.swift */; };
 		7748B3772DEEBB25001A816B /* UniversalOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7748B3762DEEBB25001A816B /* UniversalOverlay.swift */; };
+		77D283EF2DEF8723005F1C52 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D283EE2DEF8723005F1C52 /* Secrets.swift */; };
+		77D283F12DEF8754005F1C52 /* ExampleSecrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D283F02DEF8754005F1C52 /* ExampleSecrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		485569EA2DEF27A500677B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		485569EB2DEF28BC00677B4C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthViewModel.swift; sourceTree = "<group>"; };
+		485569EB2DEF28BC00677B4C /* Github.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github.swift; sourceTree = "<group>"; };
+		485569EF2DEF28EC00677B4C /* GitHubAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuth.swift; sourceTree = "<group>"; };
 		7707EEEC2DEEC735008FCEE5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		7707EEEE2DEECB04008FCEE5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		7707EEF12DEED006008FCEE5 /* NotesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCard.swift; sourceTree = "<group>"; };
 		7707EEF32DEEE116008FCEE5 /* RepoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCard.swift; sourceTree = "<group>"; };
+		7707EF062DEF4C49008FCEE5 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		770F1FCD2DEE0C7B00140442 /* Smriti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smriti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7748B34B2DEEB7D2001A816B /* NavigationBarStyleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarStyleKey.swift; sourceTree = "<group>"; };
 		7748B34C2DEEB7D2001A816B /* ViewOffsetKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOffsetKey.swift; sourceTree = "<group>"; };
@@ -56,6 +59,8 @@
 		7748B3702DEEB7FA001A816B /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		7748B3722DEEB7FB001A816B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7748B3762DEEBB25001A816B /* UniversalOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversalOverlay.swift; sourceTree = "<group>"; };
+		77D283EE2DEF8723005F1C52 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		77D283F02DEF8754005F1C52 /* ExampleSecrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleSecrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,17 +77,9 @@
 		485569E92DEF26EF00677B4C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				485569EB2DEF28BC00677B4C /* Models.swift */,
+				485569EB2DEF28BC00677B4C /* Github.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		485569EE2DEF28E600677B4C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				485569EF2DEF28EC00677B4C /* GitHubAuthViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		7707EEF02DEECFF5008FCEE5 /* Notes */ = {
@@ -152,6 +149,7 @@
 		7748B3552DEEB7D2001A816B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7707EF062DEF4C49008FCEE5 /* Triangle.swift */,
 				7748B3782DEEBB2B001A816B /* Alerts */,
 				7748B3542DEEB7D2001A816B /* Navigation Bar */,
 			);
@@ -161,7 +159,10 @@
 		7748B3572DEEB7D2001A816B /* Observables */ = {
 			isa = PBXGroup;
 			children = (
+				485569EF2DEF28EC00677B4C /* GitHubAuth.swift */,
 				7707EEEE2DEECB04008FCEE5 /* Search.swift */,
+				77D283EE2DEF8723005F1C52 /* Secrets.swift */,
+				77D283F02DEF8754005F1C52 /* ExampleSecrets.swift */,
 			);
 			path = Observables;
 			sourceTree = "<group>";
@@ -196,10 +197,10 @@
 		7748B35F2DEEB7D2001A816B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7748B3722DEEB7FB001A816B /* Settings.swift */,
-				7707EEF02DEECFF5008FCEE5 /* Notes */,
-				7707EEF52DEEE11E008FCEE5 /* Repos */,
 				7748B36C2DEEB7F6001A816B /* Home.swift */,
+				7707EEF52DEEE11E008FCEE5 /* Repos */,
+				7707EEF02DEECFF5008FCEE5 /* Notes */,
+				7748B3722DEEB7FB001A816B /* Settings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -207,8 +208,6 @@
 		7748B3602DEEB7D2001A816B /* Smriti */ = {
 			isa = PBXGroup;
 			children = (
-				485569EE2DEF28E600677B4C /* ViewModels */,
-				485569EA2DEF27A500677B4C /* Info.plist */,
 				485569E92DEF26EF00677B4C /* Models */,
 				7748B35E2DEEB7D2001A816B /* Root */,
 				7748B3572DEEB7D2001A816B /* Observables */,
@@ -273,6 +272,8 @@
 			);
 			mainGroup = 770F1FC42DEE0C7B00140442;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 770F1FCE2DEE0C7B00140442 /* Products */;
 			projectDirPath = "";
@@ -301,17 +302,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7707EEF22DEED006008FCEE5 /* NotesCard.swift in Sources */,
-				485569F02DEF28EC00677B4C /* GitHubAuthViewModel.swift in Sources */,
+				485569F02DEF28EC00677B4C /* GitHubAuth.swift in Sources */,
 				7748B3632DEEB7D2001A816B /* NavigationBarStyleKey.swift in Sources */,
 				7748B3642DEEB7D2001A816B /* ViewOffsetKey.swift in Sources */,
 				7748B3772DEEBB25001A816B /* UniversalOverlay.swift in Sources */,
 				7748B3652DEEB7D2001A816B /* NavigationBarStyle.swift in Sources */,
-				485569EC2DEF28BC00677B4C /* Models.swift in Sources */,
+				485569EC2DEF28BC00677B4C /* Github.swift in Sources */,
 				7748B36D2DEEB7F6001A816B /* Home.swift in Sources */,
 				7748B3662DEEB7D2001A816B /* ScrollOffsetBackground.swift in Sources */,
 				7748B3672DEEB7D2001A816B /* NavigationBar.swift in Sources */,
 				7748B3712DEEB7FA001A816B /* Notes.swift in Sources */,
+				77D283F12DEF8754005F1C52 /* ExampleSecrets.swift in Sources */,
 				7748B3732DEEB7FB001A816B /* Settings.swift in Sources */,
+				7707EF072DEF4C49008FCEE5 /* Triangle.swift in Sources */,
 				7748B3682DEEB7D2001A816B /* NavigationBarVariableBlurView.swift in Sources */,
 				7748B3692DEEB7D2001A816B /* NavigationBarView.swift in Sources */,
 				7748B36A2DEEB7D2001A816B /* ContentView.swift in Sources */,
@@ -320,6 +323,7 @@
 				7707EEEF2DEECB04008FCEE5 /* Search.swift in Sources */,
 				7748B36B2DEEB7D2001A816B /* SmritiApp.swift in Sources */,
 				7748B36F2DEEB7F9001A816B /* Repos.swift in Sources */,
+				77D283EF2DEF8723005F1C52 /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BD2H3ZHMD;
+				DEVELOPMENT_TEAM = 3YK32DPS3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smriti/Info.plist;
@@ -470,7 +474,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = atpugvaraa.Smriti;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = atpugvaraa.smriti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -486,7 +491,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Smriti/Resources/Preview Content\"";
-				DEVELOPMENT_TEAM = 3BD2H3ZHMD;
+				DEVELOPMENT_TEAM = 3YK32DPS3W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Smriti/Info.plist;
@@ -503,7 +508,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = atpugvaraa.Smriti;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = atpugvaraa.smriti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

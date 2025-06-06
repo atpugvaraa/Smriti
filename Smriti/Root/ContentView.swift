@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @StateObject private var githubViewModel = GitHubAuthViewModel()
-    
+struct ContentView: View {    
     var body: some View {
         TabView {
             Home()
@@ -40,7 +38,6 @@ struct ContentView: View {
                 }
                 .tag(3)
         }
-        .environmentObject(githubViewModel)
     }
 }
 

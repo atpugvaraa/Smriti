@@ -2,43 +2,33 @@ import Foundation
 import UIKit
 import Combine
 
-class GitHubAuthViewModel: ObservableObject {
+@Observable
+class GitHubAuth {
+    static let shared = GitHubAuth()
     // MARK: - Published State
-    @Published var isLoggedIn = false
-    @Published var isWaiting = false
-    @Published var errorMessage: String?
+    var isLoggedIn = false
+    var isWaiting = false
+    var errorMessage: String?
     
-    @Published var userCode: String?
-    @Published var verificationUri: String?
-    @Published var verificationUriComplete: String?
-    @Published var didOpenVerificationURL = false
+    var userCode: String?
+    var verificationUri: String?
+    var verificationUriComplete: String?
+    var didOpenVerificationURL = false
     
-    @Published var accessToken: String?
-    @Published var profile: GitHubProfile?
-    @Published var repos: [GitHubRepo] = []
+    var accessToken: String?
+    var profile: GitHubProfile?
+    var repos: [GitHubRepo] = []
     
     // MARK: - Private State
     private var deviceCode: String?
     private var pollInterval: Int = 5
     private var pollTimer: Timer?
     
-    // MARK: - Load GitHub Client ID from Config
-    func getClientID() -> String? {
-        if let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
-           let dict = NSDictionary(contentsOfFile: path),
-           let clientID = dict["GitHubClientID"] as? String {
-            return clientID
-        }
-        print("Info.plist missing or GitHubClientID missing!")
-        return nil
-    }
+    // MARK: - Load GitHub Client ID from Secrets
+    var clientID = Secrets.githubClientID
     
     // MARK: - Start Device Flow
     func startDeviceFlow() {
-        guard let clientID = getClientID() else {
-            self.errorMessage = "Client ID not found. Please check Info.plist."
-            return
-        }
         let url = URL(string: "https://github.com/login/device/code")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -116,7 +106,7 @@ class GitHubAuthViewModel: ObservableObject {
     }
     
     func pollForAccessToken() {
-        guard let clientID = getClientID(), let deviceCode = deviceCode else { return }
+        guard let deviceCode = deviceCode else { return }
         let url = URL(string: "https://github.com/login/oauth/access_token")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

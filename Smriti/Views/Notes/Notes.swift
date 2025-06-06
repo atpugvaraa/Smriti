@@ -1,29 +1,21 @@
+//
+//  Notes.swift
+//  Smriti
+//
+//  Created by Aarav Gupta on 03/06/25.
+//
+
 import SwiftUI
 
-enum GitHubUploadStep: Int, CaseIterable, Identifiable {
-    case connect, preparing, creatingRepo, uploadingNote, uploadingReadme, done
-    var id: Int { rawValue }
-    var title: String {
-        switch self {
-        case .connect: return "Connecting to GitHub"
-        case .preparing: return "Preparing Data"
-        case .creatingRepo: return "Creating Repository"
-        case .uploadingNote: return "Uploading Note"
-        case .uploadingReadme: return "Uploading README.md"
-        case .done: return "All Done!"
-        }
-    }
-}
-
 struct Notes: View {
-    @EnvironmentObject var github: GitHubAuthViewModel
+    @State private var github = GitHubAuth.shared
     @State private var showSheet = false
     @State private var isUploading = false
     @State private var uploadStatus: String?
     @State private var uploadURL: URL?
     @State private var step: GitHubUploadStep?
 
-    private let columns = [GridItem(.flexible(), spacing: 16), GridItem(.flexible(), spacing: 16)]
+    let notes = Array(0..<24)
 
     var body: some View {
         NavigationStack {
@@ -71,13 +63,25 @@ struct Notes: View {
                         .padding(.bottom, 4)
                     }
 
-                    LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(0..<10, id: \.self) { _ in
-                            NotesCard(width: 170, height: 170)
+                    ScrollView(showsIndicators: false) {
+                        let (leftColumn, rightColumn) = splitIntoColumns(notes)
+                        
+                        HStack(alignment: .top, spacing: 16) {
+                            LazyVStack(spacing: 16) {
+                                ForEach(leftColumn, id: \.self) { _ in
+                                    NotesCard(style: .random())
+                                }
+                            }
+                            
+                            LazyVStack(spacing: 16) {
+                                ForEach(rightColumn, id: \.self) { _ in
+                                    NotesCard(style: .random())
+                                }
+                            }
                         }
+                        .padding()
                     }
                 }
-                .padding()
                 .sheet(isPresented: $showSheet) {
                     CreateNoteSheet { title, content, repo, isPrivate, readme in
                         isUploading = true
@@ -127,6 +131,21 @@ struct Notes: View {
                     .presentationDetents([.medium, .large])
                 }
             }
+        }
+    }
+}
+
+enum GitHubUploadStep: Int, CaseIterable, Identifiable {
+    case connect, preparing, creatingRepo, uploadingNote, uploadingReadme, done
+    var id: Int { rawValue }
+    var title: String {
+        switch self {
+        case .connect: return "Connecting to GitHub"
+        case .preparing: return "Preparing Data"
+        case .creatingRepo: return "Creating Repository"
+        case .uploadingNote: return "Uploading Note"
+        case .uploadingReadme: return "Uploading README.md"
+        case .done: return "All Done!"
         }
     }
 }
@@ -193,5 +212,23 @@ struct CreateNoteSheet: View {
 }
 
 #Preview {
-    Notes().environmentObject(GitHubAuthViewModel())
+    Notes()
+}
+
+
+extension View {
+    func splitIntoColumns<T>(_ items: [T]) -> ([T], [T]) {
+        var col1: [T] = []
+        var col2: [T] = []
+        
+        for (index, item) in items.enumerated() {
+            if index % 2 == 0 {
+                col1.append(item)
+            } else {
+                col2.append(item)
+            }
+        }
+        
+        return (col1, col2)
+    }
 }

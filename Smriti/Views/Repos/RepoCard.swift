@@ -8,41 +8,46 @@
 import SwiftUI
 
 struct RepoCard: View {
-    var width: CGFloat
-    var height: CGFloat
-    
     var body: some View {
-        GeometryReader { proxy in
-            let size = proxy.size
-            
-            // 1. Calculate angle in degrees
-            let angle = atan(width / height) * 180 / .pi
-            
-            // 2. Calculate hypotenuse
-            let hypotenuse = sqrt(pow(width, 2) + pow(height, 2))
-            
-            ZStack {
-                Rectangle()
-                    .fill(.primary)
-                    .offset(x: 2, y: 2)
-                    .overlay {
-                        Rectangle()
-                            .fill(.primary)
-                            .rotationEffect(.degrees(angle))
-                            .frame(width: 2.7, height: hypotenuse)
-                            .offset(x: 1.1, y: 1.1)
-                    }
-                
-                Rectangle()
-                    .fill(.background)
-                    .border(.primary, width: 3)
-            }
-            .frame(width: size.width, height: size.height)
+        ViewThatFits {
+            InternalCard(width: UIScreen.main.bounds.width - 40)
+            InternalCard(width: 340) // fallback
         }
-        .frame(width: width, height: height)
     }
 }
 
+private struct InternalCard: View {
+    var width: CGFloat
+    var height: CGFloat { width / 4 }
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.primary)
+                .frame(width: width, height: height)
+                .offset(x: 4, y: 4)
+
+            Rectangle()
+                .fill(.background)
+                .frame(width: width, height: height)
+                .border(.primary, width: 1)
+
+            Triangle()
+                .frame(width: 4.5, height: 4.5)
+                .rotationEffect(.degrees(90))
+                .frame(width: width, height: height, alignment: .topTrailing)
+                .offset(x: 3.8, y: -0.3)
+
+            Triangle()
+                .frame(width: 4.5, height: 4.5)
+                .rotationEffect(.degrees(-90))
+                .frame(width: width, height: height, alignment: .bottomLeading)
+                .offset(x: -0.3, y: 3.8)
+        }
+    }
+}
+
+
 #Preview {
-    RepoCard(width: 320, height: 85)
+    RepoCard()
 }
