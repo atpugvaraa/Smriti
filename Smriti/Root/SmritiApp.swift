@@ -9,16 +9,16 @@ import SwiftUI
 
 @main
 struct SmritiApp: App {
-//s    @AppStorage("isOnboarding") private var isOnboarding: Bool = true
+    @AppStorage("isOnboarding") private var isOnboarding: Bool = true
     
     var body: some Scene {
         WindowGroup {
             RootView {
-//                if isOnboarding {
-//                    Onboarding()
-//                } else {
+                if isOnboarding {
+                    Onboarding()
+                } else {
                     ContentView()
-//                }
+                }
             }
         }
     }

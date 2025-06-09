@@ -13,7 +13,15 @@ struct Settings: View {
     var body: some View {
         NavigationStack {
             NavigationBarView(title: "Settings", scrollOffset: $scrollOffset) {
-                Text("Settings")
+                Form {
+                    Section("") {
+                        
+                    }
+                    
+                    Section("") {
+                        
+                    }
+                }
             }
         }
     }
@@ -21,4 +29,5 @@ struct Settings: View {
 
 #Preview {
     Settings()
+        .environment(GitHubAuth())
 }

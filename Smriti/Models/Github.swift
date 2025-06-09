@@ -1,7 +1,6 @@
 import Foundation
 
 // MARK: - Device Flow Responses
-
 struct GitHubDeviceCodeResponse: Codable {
     let device_code: String
     let user_code: String
@@ -32,6 +31,22 @@ struct GitHubProfile: Codable {
 // MARK: - GitHub Repo
 
 struct GitHubRepo: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let full_name: String
+    let description: String?
+    let html_url: URL
+    let fork: Bool
+    let privateRepo: Bool
+
+    // Map JSON "private" to "privateRepo"
+    private enum CodingKeys: String, CodingKey {
+        case id, name, full_name, description, html_url, fork
+        case privateRepo = "private"
+    }
+}
+
+struct SmritiRepo: Codable, Identifiable {
     let id: Int
     let name: String
     let full_name: String
