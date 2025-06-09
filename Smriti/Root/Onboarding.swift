@@ -11,16 +11,12 @@ struct Onboarding: View {
     @AppStorage("isOnboarding") private var isOnboarding: Bool = true
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Text("Log in to github")
+        TabView {
+            GithubLoginButton()
             
             Text("Setup device flow")
             
             Text("Enjoy!")
-            
-            Spacer()
             
             Button {
                 isOnboarding = false
@@ -31,6 +27,7 @@ struct Onboarding: View {
             }
             .padding(100)
         }
+        .tabViewStyle(.page)
     }
 }
 

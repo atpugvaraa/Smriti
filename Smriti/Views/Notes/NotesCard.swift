@@ -22,9 +22,9 @@ struct NotesCard: View {
     
     var aspectRatio: CGFloat {
         switch style {
-        case .square: return 1
-        case .horizontal: return 3/2
-        case .vertical: return 2/3
+            case .square: return 1
+            case .horizontal: return 3/2
+            case .vertical: return 2/3
         }
     }
     

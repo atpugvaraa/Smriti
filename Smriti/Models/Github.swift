@@ -46,6 +46,22 @@ struct GitHubRepo: Codable, Identifiable {
     }
 }
 
+struct SmritiRepo: Codable, Identifiable {
+    let id: Int
+    let name: String
+    let full_name: String
+    let description: String?
+    let html_url: URL
+    let fork: Bool
+    let privateRepo: Bool
+
+    // Map JSON "private" to "privateRepo"
+    private enum CodingKeys: String, CodingKey {
+        case id, name, full_name, description, html_url, fork
+        case privateRepo = "private"
+    }
+}
+
 // Helper struct for API request/response
 struct GitHubFileUploadRequest: Encodable {
     let message: String
