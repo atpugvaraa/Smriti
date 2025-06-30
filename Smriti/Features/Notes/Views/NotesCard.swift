@@ -18,35 +18,33 @@ enum NotesCardStyle {
 }
 
 struct NotesCard: View {
+    var note: SmritiNote
     var style: NotesCardStyle = .square
+    @Environment(NavigationManager.self) private var navigation
     
     var aspectRatio: CGFloat {
         switch style {
-            case .square: return 1
-            case .horizontal: return 3/2
-            case .vertical: return 2/3
+        case .square: return 1
+        case .horizontal: return 3/2
+        case .vertical: return 2/3
         }
     }
-    
+
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(.primary)
                 .offset(x: 4, y: 4)
-
             Rectangle()
                 .fill(.background)
                 .border(.primary, width: 1)
-
             GeometryReader { proxy in
                 let size = proxy.size
-
                 Triangle()
                     .frame(width: 4.5, height: 4.5)
                     .rotationEffect(.degrees(90))
                     .frame(width: size.width, height: size.height, alignment: .topTrailing)
                     .offset(x: 3.9, y: -0.3)
-
                 Triangle()
                     .frame(width: 4.5, height: 4.5)
                     .rotationEffect(.degrees(-90))
@@ -56,10 +54,12 @@ struct NotesCard: View {
         }
         .aspectRatio(aspectRatio, contentMode: .fit)
         .frame(maxWidth: .infinity)
+        .onTapGesture {
+            navigation.push(.noteDetail(note))
+        }
     }
 }
 
-
 #Preview {
-    NotesCard()
+    NotesCard(note: SmritiNote(title: "Sample Note", content: "This is a preview of a note for design purposes only.", lastModified: Date.now, isHidden: false))
 }

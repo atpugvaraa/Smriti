@@ -11,15 +11,13 @@ struct Repos: View {
     @State private var scrollOffset: CGFloat = 0
     @State private var showDeleteOverlay = false
     @State private var repoToDelete: GitHubRepo?
-    @State private var repos: [SmritiRepo]?
     @State private var isDeleting = false
-    @State private var auth = GitHubAuth.shared
-    
+    @State private var github = GitHubService.shared
 
     var body: some View {
         NavigationStack {
             NavigationBarView(title: "Repos", scrollOffset: $scrollOffset) {
-                if !auth.isLoggedIn {
+                if !github.isLoggedIn {
                     VStack(spacing: 16) {
                         Image(systemName: "lock.slash")
                             .resizable()
@@ -32,24 +30,30 @@ struct Repos: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     ScrollView {
-                        if auth.repos.isEmpty {
+                        if github.repos.isEmpty {
                             VStack(spacing: 16) {
                                 ProgressView("Loading repositories…")
-                                Text("No repositories found, or loading…")
+                                Text("No repositories found.")
                                     .foregroundStyle(.secondary)
                             }
                             .frame(maxWidth: .infinity, minHeight: 200)
                         } else {
-                            ScrollView {
-                                VStack(spacing: 12) {
-                                    ForEach(0...10, id: \.self) { _ in
-                                        RepoCard()
-                                            .frame(maxWidth: .infinity)
-                                            .padding(.horizontal, 20)
-                                    }
+                            VStack(spacing: 12) {
+                                ForEach(github.repos) { repo in
+                                    RepoCardView(repo: repo)
+                                        .frame(maxWidth: .infinity)
+                                        .padding(.horizontal, 20)
+                                        .contextMenu {
+                                            Button(role: .destructive) {
+                                                repoToDelete = repo
+                                                showDeleteOverlay = true
+                                            } label: {
+                                                Label("Delete Repo", systemImage: "trash")
+                                            }
+                                        }
                                 }
-                                .padding(.top)
                             }
+                            .padding(.top)
                         }
                     }
                 }
@@ -62,11 +66,13 @@ struct Repos: View {
                     isDeleting: isDeleting,
                     onConfirm: {
                         isDeleting = true
-                        auth.deleteRepo(repo: repo) { success in
-                            isDeleting = false
-                            showDeleteOverlay = false
-                            repoToDelete = nil
-                            auth.fetchUserRepos()
+                        github.deleteRepo(repo: repo) { success in
+                            DispatchQueue.main.async {
+                                isDeleting = false
+                                showDeleteOverlay = false
+                                repoToDelete = nil
+                                github.refreshRepos()
+                            }
                         }
                     },
                     onCancel: {
@@ -76,35 +82,5 @@ struct Repos: View {
                 )
             }
         }
-    }
-}
-
-#Preview {
-    ZStack {
-        LinearGradient(
-            gradient: Gradient(colors: [Color.black, Color.gray.opacity(0.7)]),
-            startPoint: .topLeading, endPoint: .bottomTrailing)
-            .ignoresSafeArea()
-        VStack(spacing: 24) {
-            RepoCardView(repo: .init(
-                id: 1,
-                name: "VisionCode",
-                full_name: "VisionCode/Code",
-                description: "A Simple Code editor for html and css, + js",
-                html_url: URL(string: "https://github.com/user/VisioNCode")!,
-                fork: false,
-                privateRepo: false
-            ))
-            RepoCardView(repo: .init(
-                id: 2,
-                name: "Smriti",
-                full_name: "Smriti/Notes",
-                description: "Your private repo, safe & sound.",
-                html_url: URL(string: "https://github.com/user/Smriti")!,
-                fork: false,
-                privateRepo: true
-            ))
-        }
-        .padding()
     }
 }

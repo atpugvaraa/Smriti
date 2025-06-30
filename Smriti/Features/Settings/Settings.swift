@@ -29,5 +29,4 @@ struct Settings: View {
 
 #Preview {
     Settings()
-        .environment(GitHubAuth())
 }

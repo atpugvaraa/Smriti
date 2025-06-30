@@ -30,7 +30,7 @@ struct GitHubProfile: Codable {
 
 // MARK: - GitHub Repo
 
-struct GitHubRepo: Codable, Identifiable {
+struct GitHubRepo: Codable, Identifiable, Hashable {
     let id: Int
     let name: String
     let full_name: String
@@ -67,6 +67,13 @@ struct GitHubFileUploadRequest: Encodable {
     let message: String
     let content: String
     let sha: String?            // this is only needed if updating that repo..
+}
+
+struct GitHubFileInfo: Decodable {
+    let name: String
+    let path: String
+    let type: String
+    let download_url: URL?
 }
 
 struct GitHubFileUploadResponse: Decodable {
